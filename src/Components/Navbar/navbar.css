@@ -1,0 +1,132 @@
+.navbar {
+    background-color: #60C0BF;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.navbar_list1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0;
+    gap: 20px; /* Adjust this value to increase the gap */
+    list-style: none;
+}
+.nav-link:hover{
+    color: #477bb2;
+    cursor:pointer;
+}
+
+.navbar_list1 li {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navbar_list1 li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar_list2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px; /* Adjust this value to increase the gap */
+}
+
+.nav-button {
+    background-color: #1d80e2;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar_list1,
+    .navbar_list2 {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar_list1 {
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .navbar_list2 {
+        gap: 10px;
+    }
+
+    .navbar_list1 li,
+    .navbar_list2 button {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar_list1,
+    .navbar_list2 {
+        width: 100%;
+    }
+
+    .navbar_list1 li,
+    .navbar_list2 button {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .navbar_list1,
+    .navbar_list2 {
+        width: 100%;
+    }
+
+    .navbar_list1 li,
+    .navbar_list2 button {
+        margin-bottom: 5px;
+    }
+
+    .navbar_list1 li {
+        font-size: 18px;
+    }
+
+    .nav-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
